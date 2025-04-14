@@ -2,8 +2,8 @@ import { useTitle } from '@/hooks/ui/useTitle';
 import { useId } from 'react';
 import { Link } from 'react-router';
 
-const SITE_URL = 'https://example.com';
-const POLICY_URL = 'https://example.com/policy';
+const SITE_URL = 'https://pavelmalyv.github.io/todo-app/';
+const POLICY_URL = 'https://pavelmalyv.github.io/todo-app/privacy-policy';
 const EMAIL = 'pavelmalyv@gmail.com';
 
 const PolicyPage = () => {
