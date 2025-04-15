@@ -1,4 +1,5 @@
 import Book from '@/components/book/Book';
+import { BASE_URL } from '@/consts/routes';
 
 import { useTitle } from '@/hooks/ui/useTitle';
 import { useId } from 'react';
@@ -10,7 +11,7 @@ const AboutPage = () => {
 
 	return (
 		<Book aria-labelledby={titleId}>
-			<Book.Main title="О проекте" titleId={titleId} backButton={{ to: '/' }}>
+			<Book.Main title="О проекте" titleId={titleId} backButton={{ to: BASE_URL }}>
 				<div className="text">
 					<p>
 						Данный проект разработан в образовательных целях и не предназначен для реальных задач.

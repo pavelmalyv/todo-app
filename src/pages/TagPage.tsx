@@ -10,6 +10,7 @@ import { useParams } from 'react-router';
 import { useState } from 'react';
 import { useTitle } from '@/hooks/ui/useTitle';
 import { ERRORS_MESSAGES, NOT_FOUND_MESSAGES } from '@/consts/messages';
+import { BASE_URL } from '@/consts/routes';
 
 const TagPage = () => {
 	const params = useParams<{ id?: string }>();
@@ -21,7 +22,7 @@ const TagPage = () => {
 	const isRedirect = isDeleting && isNotFoundError(error);
 	const errorWithoutDeleting = isDeleting ? undefined : error;
 
-	useRedirectNotFound(isRedirect, '/');
+	useRedirectNotFound(isRedirect, BASE_URL);
 	checkNotFoundErrorOrThrow(errorWithoutDeleting);
 	useShowError(ERRORS_MESSAGES.tagNameLoading, errorWithoutDeleting);
 

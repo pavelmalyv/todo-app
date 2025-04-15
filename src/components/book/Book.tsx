@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 import cl from './Book.module.scss';
+import imageWebp from '/src/img/book.webp';
+import imageJpg from '/src/img/book.jpg';
 import VisuallyHiddenLoader from '../visuallyHiddenLoader/VisuallyHiddenLoader';
 
 import { Link } from 'react-router';
@@ -18,10 +20,10 @@ const Book = ({ children, ['aria-labelledby']: ariaLabelledby }: BookProps) => {
 					<div className={cl.inner}>
 						<div className={cl.image}>
 							<picture>
-								<source srcSet="/img/book.webp" type="image/webp" />
+								<source srcSet={imageWebp} type="image/webp" />
 								<img
 									className={cl['image-img']}
-									src="/img/book.jpg"
+									src={imageJpg}
 									width={1160}
 									height={1444}
 									alt="Пустой лист со списком задач висит на стене"

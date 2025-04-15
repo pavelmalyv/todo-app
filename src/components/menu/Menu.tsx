@@ -15,6 +15,7 @@ import { Link, NavLink } from 'react-router';
 import { ERRORS_MESSAGES } from '@/consts/messages';
 import {
 	ABOUT_URL,
+	BASE_URL,
 	CALENDAR_URL,
 	POLICY_URL,
 	TODAY_TASKS_URL,
@@ -57,7 +58,7 @@ const Menu = ({ isModal = false, onClose }: MenuProps) => {
 					<nav className={cl.menu}>
 						<ul className={cl['menu-list']}>
 							<li className={cl['menu-item']}>
-								<NavLink className={cl['menu-link']} to={'/'}>
+								<NavLink className={cl['menu-link']} to={BASE_URL}>
 									<div className={cl['menu-name']}>
 										<Icon className={cl['menu-icon']}>double_arrow</Icon>
 

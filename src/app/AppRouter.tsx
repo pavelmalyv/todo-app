@@ -8,6 +8,7 @@ import { lazy, Suspense } from 'react';
 import {
 	ABOUT_URL,
 	ACTION_URL,
+	BASE_URL,
 	CALENDAR_URL,
 	getTagUrl,
 	getTasksDayUrl,
@@ -41,7 +42,7 @@ const AppRouter = () => {
 	const privateRoutes = (
 		<>
 			<Route
-				index
+				path={BASE_URL}
 				element={
 					<Suspense>
 						<UpcomingPage />
@@ -89,14 +90,14 @@ const AppRouter = () => {
 				}
 			/>
 
-			<Route path="*" element={<Navigate to={'/'} />} />
+			<Route path="*" element={<Navigate to={BASE_URL} />} />
 		</>
 	);
 
 	const publicRoutes = (
 		<>
 			<Route
-				index
+				path={BASE_URL}
 				element={
 					<Suspense>
 						<HomePage />
